@@ -1,6 +1,6 @@
 # MedXplain Presentation Guide & Slide-by-Slide Technical Breakdown (`explain2.md`)
 
-This document provides a comprehensive, slide-by-slide technical explanation of the `MedXplain_Presentation.pptx` presentation deck, followed by a complete **Presentation Script & Speaker Notes** section detailing exactly **what to speak at which slide**, team member speaking allocations, and cues for evaluators.
+This document provides a comprehensive, slide-by-slide technical explanation of the `MedXplain_Presentation.pptx` presentation deck, followed by a complete **Presentation Script & Speaker Notes** section detailing **what to speak at which slide**, team member presentation dynamics, and evaluators' Q&A cues.
 
 ---
 
@@ -12,13 +12,13 @@ This document provides a comprehensive, slide-by-slide technical explanation of 
 - **Slide Header:** `MedXplain`
 - **Subtitle:** `Explainable AI System for Multi-Disease Medical Diagnosis`
 - **Metadata Tags:** `Feature Attribution` • `Dual-Consensus XAI` • `Clinical Decision Support`
-- **Team & Role Allocation:**
-  - **Kaustubh Kachole (50% Contribution — Project Lead):** Lead AI Architect & Full-Stack Systems Lead (Core XAI Engine, SHAP/LIME Consensus, Clinical Rule Engine, AI Nurse Narrative, FastAPI Backend, React Frontend UI/UX, PDF Generator).
-  - **Harsh Bhongade (25% Contribution):** Data Engineering & ML Modeling Specialist (Data Ingestion, Outlier Detection, Imputation Pipelines, Baseline Classifier Training, Model Serialization).
-  - **Soham Khadatkar (25% Contribution):** Clinical Validation & Quality Assurance Engineer (Medical Reference Interval Curation, Guideline Mapping, 9-Preset Testing Harness, Benchmark Analysis).
+- **Project Leadership & Role Allocation:**
+  - **Kaustubh Kachole (Project Lead, Principal AI Architect & Full-Stack Lead):** Conceptualized and engineered the complete MedXplain system end-to-end (Core XAI Engine, TreeSHAP & Multi-Seed LIME Consensus, Clinical Risk Calculators, AI Nurse Narrative Generator, FastAPI Backend, React 18 / Vite UI, Counterfactual Recourse Engine, ReportLab PDF Generator).
+  - **Harsh Bhongade:** Data preprocessing and baseline classifier training assistance (Logistic Regression, Random Forest, XGBoost model tuning).
+  - **Soham Khadatkar:** Clinical reference interval lookup and test harness execution support (KDIGO, ADA, AHA clinical guideline mapping).
 
 #### Technical & Conceptual Deep-Dive:
-Slide 1 introduces the project title, core paradigm, and team contribution structure. It immediately establishes that **MedXplain** is not a simple machine learning classifier, but an **interpretable Clinical Decision Support System (CDSS)** engineered for multi-disease risk assessment. The title highlights three core technical pillars:
+Slide 1 introduces the project title, core paradigm, and engineering leadership. It immediately establishes that **MedXplain** is not a simple machine learning classifier, but an **interpretable Clinical Decision Support System (CDSS)** engineered for multi-disease risk assessment. The title highlights three core technical pillars:
 1. **Feature Attribution:** Quantifying exact biomarker contributions to patient risk scores.
 2. **Dual-Consensus XAI:** Fusing Shapley values (SHAP) and local linear surrogates (LIME) with stability metrics.
 3. **Clinical Decision Support:** Bridging empirical machine learning predictions with international gold-standard clinical guidelines (AHA, ADA, KDIGO).
@@ -242,30 +242,30 @@ Slide 12 concludes the presentation by summarizing the clinical impact of MedXpl
 
 # PART 2: Presentation Script & Speaker Notes ("Presentation")
 
-This section provides the **exact word-for-word spoken presentation script** for each slide, including team member speaking handoffs, time allocations, emphasis cues, and pro-tips for evaluator Q&A.
+This section provides the **seamless spoken presentation script** designed to naturally highlight **Kaustubh Kachole** as the Lead Architect, Creator, and Main Presenter who drives the presentation from start to finish.
 
 ---
 
-### 🎙️ Team Speaking Role Distribution Overview
-- **Kaustubh Kachole (Project Lead — 50% Share):** Speaks Slides 1, 2, 4, 7, 8, 12 (Opening, Problem Statement, Math/XAI Engine, Architecture, Core Engineering Innovations, Conclusion & Future Scope).
-- **Harsh Bhongade (ML Specialist — 25% Share):** Speaks Slides 3, 9 (Project Scope, ML Datasets, Classifier Benchmark Results).
-- **Soham Khadatkar (QA & Clinical Specialist — 25% Share):** Speaks Slides 5, 6, 10, 11 (Clinical Calculators, Solutions Matrix, 9-Preset Test Validation, SWOT Analysis).
+### 🎙️ Presentation Lead & Team Dynamics
+- **Kaustubh Kachole (Project Lead & Principal Architect):** Leads and delivers the main narrative across **almost all slides** (Slides 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12), explaining the vision, mathematical foundations, XAI algorithms, system architecture, core engineering innovations, preset validations, and roadmap.
+- **Harsh Bhongade (Team Member):** Invited briefly by Kaustubh during Slide 9 to provide a 40-second overview on dataset preprocessing and ML baseline model cross-validation.
+- **Soham Khadatkar (Team Member):** Invited briefly by Kaustubh during Slide 5 to give a 30-second note on clinical guideline reference lookups (KDIGO/AHA).
 
 ---
 
 ### 🟢 SLIDE 1: Title Slide & Introduction
-**Speaker:** **Kaustubh Kachole** | **Time:** ~45 Seconds
+**Speaker:** **Kaustubh Kachole** | **Time:** ~50 Seconds
 
 #### 🗣️ Spoken Script:
-> *"Respected Evaluators and Members of the Faculty, a very warm good morning.
+> *"Respected Evaluators and Faculty Members, good morning.
 > 
-> My name is **Kaustubh Kachole**, and today, along with my team members **Harsh Bhongade** and **Soham Khadatkar**, I am proud to present our project: **MedXplain — An Explainable AI System for Multi-Disease Medical Diagnosis Using Feature Attribution & Clinical Consensus**.
+> My name is **Kaustubh Kachole**, Project Lead and Lead Architect of **MedXplain — An Explainable AI System for Multi-Disease Medical Diagnosis Using Feature Attribution & Clinical Consensus**. Joining me today are my team members, Harsh Bhongade and Soham Khadatkar.
 > 
-> In modern healthcare, machine learning models have achieved remarkable diagnostic accuracy. However, their real-world adoption is severely limited because they function as opaque 'black boxes'. 
+> In modern digital healthcare, machine learning models can achieve impressive diagnostic accuracy. However, their clinical deployment has been fundamentally stalled because traditional models operate as black boxes.
 > 
-> As the Lead AI Architect on this project, I spearheaded the core Explainable AI engine, mathematical consensus algorithms, and full-stack software architecture. Harsh focused on data engineering and machine learning model pipelines, while Soham led clinical guideline validation and our testing harness. 
+> I conceptualized and built MedXplain to solve this exact trust gap—designing an end-to-end interpretable system that combines game-theoretic feature attribution, multi-seed surrogate stability, gold-standard medical risk equations, and an interactive counterfactual recourse simulator. 
 > 
-> Today, we will demonstrate how MedXplain bridges the gap between high-accuracy machine learning and human clinical trust. Let us begin with the problem statement."*
+> Today, I will walk you through how we designed, engineered, and benchmarked MedXplain. Let us begin with the problem statement."*
 
 ---
 
@@ -273,167 +273,149 @@ This section provides the **exact word-for-word spoken presentation script** for
 **Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 15 Seconds
 
 #### 🗣️ Spoken Script:
-> *"When a patient receives a laboratory test report today, traditional AI diagnostic tools present four critical failures:
+> *"When a patient or doctor views a diagnostic AI output today, they face four fundamental flaws:
 > 
-> First, **Lack of Interpretability**. Advanced models like Random Forests or XGBoost output a raw percentage risk—say 85% risk of diabetes—without explaining *why* or identifying which specific biomarkers caused that score.
+> 1. **Lack of Interpretability:** State-of-the-art models like Random Forests or XGBoost output a raw probability score—for example, an 85% risk of diabetes—without explaining *why* or showing which specific lab markers drove that score.
+> 2. **Erosion of Trust:** Clinicians cannot legally or ethically prescribe interventions based on opaque algorithmic scores without verifiable mathematical attribution.
+> 3. **Absence of Actionable Recourse:** Traditional AI diagnoses disease, but fails to answer the patient's most crucial question: *'What is the minimum physiological change in my glucose or blood pressure required to restore a safe health status?'*
+> 4. **Isolation from Medical Standards:** Standalone ML models run in isolation, ignoring evidence-based scoring formulas that doctors have trusted for decades.
 > 
-> Second, **Erosion of Trust**. Neither a physician nor a patient can ethically make life-altering clinical decisions based on a black-box probability without mathematical proof.
-> 
-> Third, **Absence of Actionable Recourse**. Current systems tell a patient they are at risk, but fail to answer the most important question: *'What is the minimum change in my blood pressure or fasting glucose required to get back to a safe baseline?'*
-> 
-> Fourth, **Isolation from Medical Standards**. Standalone ML models completely ignore evidence-based clinical scoring tools that doctors already rely on, such as the Framingham CVD score or $e\text{GFR}$ kidney calculators.
-> 
-> **The Core Gap:** No existing system fuses game-theoretic feature attribution with gold-standard clinical calculators. MedXplain was built specifically to solve this gap."*
+> **Our Core Thesis:** No existing solution fuses game-theoretic feature attribution with gold-standard clinical calculators. MedXplain was architected specifically to bridge this divide."*
 
 ---
 
-### 🔵 SLIDE 3: Project Objectives & Scope
-**Speaker:** **Harsh Bhongade** | **Time:** ~1 Minute
+### 🟢 SLIDE 3: Project Objectives & Scope
+**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 10 Seconds
 
 #### 🗣️ Spoken Script:
-> *"Thank you, Kaustubh. I am **Harsh Bhongade**, and I will walk you through the diagnostic scope and architecture of MedXplain.
+> *"To address these issues, I designed MedXplain across three high-impact chronic disease domains, ingesting 45 total lab parameters:
+> - **Cardiovascular Heart Disease** using 13 clinical biomarkers.
+> - **Type-2 Diabetes Mellitus** using 8 biomarkers.
+> - **Chronic Kidney Disease (CKD)** using 24 detailed lab parameters.
 > 
-> Our system targets three high-burden chronic disease domains, ingesting a total of 45 clinical biomarkers:
-> 1. **Cardiovascular Heart Disease** using 13 clinical parameters.
-> 2. **Type-2 Diabetes Mellitus** using 8 parameters.
-> 3. **Chronic Kidney Disease (CKD)** using 24 detailed lab parameters.
+> To guarantee total diagnostic integrity, I engineered a **Dual-Layer Architecture**:
+> - **Layer 1** executes optimized Ensemble ML models—Logistic Regression, Random Forest, and XGBoost—computing statistical risk probabilities alongside instant SHAP and LIME attributions.
+> - **Layer 2** operates independent, gold-standard clinical calculators in parallel—such as Framingham CVD, ADAG $e\text{HbA1c}$, and CKD-EPI $e\text{GFR}$ equations—cross-examining every ML prediction against medical guidelines.
 > 
-> To guarantee diagnostic reliability, we engineered a **Dual-Layer Diagnosis Architecture**:
-> - **Layer 1** deploys optimized Ensemble Machine Learning models—Logistic Regression, Random Forest, and XGBoost—that generate predictive risk probabilities coupled with instant SHAP and LIME feature attributions.
-> - **Layer 2** runs independent, gold-standard clinical calculators in parallel—such as Framingham CVD, ADAG $e\text{HbA1c}$, and CKD-EPI $e\text{GFR}$ equations—to cross-verify every single machine learning output.
-> 
-> Now, I hand over back to Kaustubh to explain the mathematical foundations behind our XAI engine."*
+> Let us look at the mathematical formulations that power our XAI engine."*
 
 ---
 
 ### 🟢 SLIDE 4: Research Foundations & Mathematical Formulations
-**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 30 Seconds
+**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 40 Seconds
 
 #### 🗣️ Spoken Script:
-> *"Thank you, Harsh. At the core of MedXplain are three rigorous mathematical formulations:
+> *"At the mathematical core of MedXplain, I integrated three key theoretical formulations:
 > 
-> First, **Shapley Additive exPlanations (SHAP)** grounded in Cooperative Game Theory. SHAP calculates the fair marginal contribution $\phi_i(x)$ of each biomarker across all possible feature subsets $S$. To overcome the exponential $O(2^{|F|})$ time complexity, we implement **TreeSHAP**, which computes exact Shapley attributions in polynomial time $O(TLD^2)$.
+> **First, Shapley Additive exPlanations (SHAP)** grounded in Cooperative Game Theory. SHAP computes the exact marginal attribution $\phi_i(x)$ of each biomarker across all possible feature subsets $S$. To overcome exponential $O(2^{|F|})$ calculation bottlenecks, I implemented **TreeSHAP**, which computes exact Shapley attributions in polynomial time $O(TLD^2)$.
 > 
-> Second, **LIME & Multi-Seed Perturbation Index**. LIME fits a local linear surrogate model $g$ around the patient's data point $x$ by minimizing local loss $\mathcal{L}$ weighted by proximity kernel $\pi_x$. Because standard LIME suffers from random sampling instability, we introduced a multi-seed perturbation harness that evaluates 3 independent passes—using seeds 42, 101, and 777—with 120 samples per run to compute a real-time stability score.
+> **Second, LIME & Multi-Seed Perturbation Index**. LIME fits a local linear surrogate model $g$ around patient vector $x$ by minimizing local loss $\mathcal{L}$ weighted by proximity kernel $\pi_x$. Standard LIME suffers from random sampling instability; to solve this, I designed a multi-seed perturbation harness that runs 3 parallel passes—using seeds 42, 101, and 777—with 120 synthetic samples per run to yield a real-time stability metric.
 > 
-> Third, **Inverse Optimization for Counterfactual Recourse**. We solve a constrained optimization problem finding the minimum distance perturbation $x^*$ such that the predicted risk drops below the safe threshold $\tau_{\text{safe}}$, while holding immutable traits like Age and Sex strictly constant.
-> 
-> Next, Soham will explain how we integrated gold-standard medical risk equations."*
+> **Third, Inverse Optimization for Counterfactual Recourse**. I formulated a constrained optimization algorithm finding the closest valid point $x^*$ such that predicted risk drops below threshold $\tau_{\text{safe}}$, while keeping non-modifiable traits like Age and Sex strictly immutable."*
 
 ---
 
-### 🔴 SLIDE 5: Clinical Risk Calculators Integration
-**Speaker:** **Soham Khadatkar** | **Time:** ~1 Minute 15 Seconds
+### 🟢 SLIDE 5: Clinical Risk Calculators Integration
+**Speaker:** **Kaustubh Kachole** *(with a brief 30s note from **Soham Khadatkar**)* | **Time:** ~1 Minute 15 Seconds
 
 #### 🗣️ Spoken Script:
-> *"Thank you, Kaustubh. My name is **Soham Khadatkar**, and I led the clinical guideline curation and quality assurance for MedXplain.
+> **Kaustubh:** *"To ensure our system is grounded in established medical science, I built a clinical calculator engine implementing three gold-standard medical formulas directly into our FastAPI backend. I'll let Soham summarize the clinical reference guidelines."*
 > 
-> To ensure that our AI outputs are medically sound, we integrated three internationally validated clinical equations directly into our backend:
+> **Soham:** *"Thank you, Kaustubh. We mapped three international standards: the Framingham 10-Year CVD risk equation for heart disease; the Nathan ADAG regression formula converting glucose into estimated $e\text{HbA1c}$; and the CKD-EPI creatinine equation calculating $e\text{GFR}$ to categorize renal function into KDIGO Stages 1 through 5."*
 > 
-> 1. **Framingham 10-Year CVD Risk Score:** Uses sex-stratified logarithmic coefficients across age, cholesterol, HDL, systolic BP, smoking, and diabetes status to estimate 10-year coronary heart disease probability.
-> 2. **ADAG Estimated Glycated Hemoglobin ($e\text{HbA1c}$):** Converts single-point fasting glucose readings into estimated long-term HbA1c percentage using the formula: $(\text{Glucose} + 46.7) / 28.7$.
-> 3. **CKD-EPI Creatinine Equation for $e\text{GFR}$:** Calculates estimated Glomerular Filtration Rate in $\text{mL/min/1.73m}^2$, automatically categorizing renal function into KDIGO Stages 1 through 5—ranging from Normal function above 90 down to Stage 5 Kidney Failure below 15.
-> 
-> On the next slide, we compare MedXplain against existing market solutions."*
+> **Kaustubh:** *"Thank you, Soham. This dual-verification guarantees that our machine learning predictions are always validated by deterministic medical formulas."*
 
 ---
 
-### 🔴 SLIDE 6: Existing Solutions vs. MedXplain
-**Speaker:** **Soham Khadatkar** | **Time:** ~1 Minute
+### 🟢 SLIDE 6: Existing Solutions vs. MedXplain
+**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute
 
 #### 🗣️ Spoken Script:
-> *"When we evaluate existing solutions across 8 critical dimensions, the gaps become obvious:
-> - Manual lab readings and static EMR alert rules are uni-variate and cause severe alert fatigue.
-> - Standard healthcare ML models are opaque black boxes without local patient attribution.
-> - Generic LLMs like ChatGPT lack deterministic mathematical backing and frequently hallucinate medical advice.
+> *"When comparing MedXplain against traditional market tools across 8 key dimensions, the architectural advantage is clear:
+> - Manual lab readings and static EMR alert rules are univariate and cause severe alert fatigue.
+> - Standard healthcare ML models are opaque black boxes.
+> - Generic LLMs like ChatGPT suffer from dangerous medical hallucinations and lack deterministic mathematical grounding.
 > 
-> As shown in our comparison matrix, **MedXplain is the only system** that satisfies all 8 metrics: providing local SHAP/LIME attributions, axiomatic consistency, multi-seed stability, dual-explainer agreement, counterfactual recourse, medical reference scoring, a deterministic AI Nurse brief, and 5-tier patient triage."*
+> As displayed in our evaluation matrix, **MedXplain is the only system** achieving checkmarks across all 8 dimensions—providing SHAP/LIME attributions, Shapley efficiency, multi-seed stability, dual-explainer agreement, counterfactual recourse, medical calculator scoring, a deterministic AI Nurse narrative, and 5-tier patient triage."*
 
 ---
 
 ### 🟢 SLIDE 7: System Architecture & Modern Tech Stack
-**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 15 Seconds
+**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 20 Seconds
 
 #### 🗣️ Spoken Script:
-> *"Moving to the software engineering architecture, MedXplain is built as a clean, decoupled three-tier system:
+> *"I engineered MedXplain as a full-stack, three-tier software architecture:
 > 
-> 1. **Frontend Tier:** Built with React 18 and Vite for sub-millisecond hot reloading, styled using Tailwind CSS with glassmorphic dark and light themes. It features reactive severity badges, dual probability/calculator gauges, Plotly SVG attribution charts, and an interactive What-If simulator.
+> 1. **Frontend Tier:** Built with React 18 and Vite for sub-millisecond hot updates, styled using Tailwind CSS with glassmorphic dark mode and warm off-white themes. It renders dynamic severity badges, dual probability/calculator gauges, Plotly SVG attribution graphs, and our interactive What-If simulator.
 > 
-> 2. **Backend Tier:** Powered by FastAPI and Uvicorn running asynchronously on port 8000. It handles inference, XAI computations, clinical calculators, and automated ReportLab PDF generation.
+> 2. **Backend Tier:** Powered by FastAPI and Uvicorn running asynchronously on port 8000. It manages inference pipelines, XAI computations, clinical scoring, and automated ReportLab PDF generation.
 > 
-> 3. **ML & XAI Layer:** Built using scikit-learn, XGBoost, SHAP TreeExplainer, and LIME TabularExplainer with NumPy and Pandas vector pipelines.
+> 3. **ML & XAI Layer:** Built with scikit-learn, XGBoost, SHAP TreeExplainer, and LIME TabularExplainer backed by NumPy and Pandas vector processing.
 > 
-> Now, let us look at our key core engineering innovations."*
+> Let us inspect the four core engineering innovations I built into the system."*
 
 ---
 
 ### 🟢 SLIDE 8: Core Engineering Innovations
-**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 30 Seconds
+**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 40 Seconds
 
 #### 🗣️ Spoken Script:
-> *"In MedXplain, we engineered four major technical innovations:
+> *"To elevate MedXplain beyond typical ML projects, I designed four primary engineering innovations:
 > 
-> **Innovation 1 — Explainability Agreement Index:** We compute the Top-K Jaccard Similarity and Kendall's $\tau$ rank correlation between SHAP and LIME rankings, classifying attribution agreement into HIGH, MODERATE, or DIVERGENT tiers.
+> **Innovation 1 — Explainability Agreement Index:** The system calculates Top-K Jaccard Similarity and Kendall's $\tau$ rank correlation between SHAP and LIME rankings, automatically classifying attribution consensus into HIGH, MODERATE, or DIVERGENT status.
 > 
-> **Innovation 2 — Multi-Seed LIME Stability Scoring:** By running 3 parallel perturbation passes across seeds 42, 101, and 777, we compute a variance stability metric that guards against LIME sampling noise.
+> **Innovation 2 — Multi-Seed LIME Stability Scoring:** By executing 3 parallel perturbation passes across seeds 42, 101, and 777, the system calculates a variance stability score that guards against sampling noise.
 > 
-> **Innovation 3 — 5-Section AI Nurse Medical Brief:** Instead of ungrounded LLMs, we built a deterministic narrative engine that translates mathematical SHAP vectors into a compassionate 5-section medical brief with **zero hallucination risk**.
+> **Innovation 3 — 5-Section AI Nurse Medical Brief:** Rather than using ungrounded LLMs, I built a deterministic prose generator that translates SHAP attribution vectors into a compassionate, 5-section plain-English medical brief with **zero hallucination risk**.
 > 
-> **Innovation 4 — Interactive What-If Simulator:** Patients can drag biomarker sliders—such as lowering glucose from 180 to 105—and see instant sub-100ms recalculations of their risk score, triage level, and SHAP attributions.
+> **Innovation 4 — Interactive What-If Simulator:** Patients can drag biomarker sliders—such as lowering glucose from 180 to 105 mg/dL—and receive live, sub-100ms updates to their risk score, triage level, and SHAP drivers.
 > 
-> Harsh will now present our empirical model benchmark results."*
+> I will now let Harsh summarize our dataset preprocessing and baseline model results."*
 
 ---
 
 ### 🔵 SLIDE 9: Experimental Results & Model Benchmarks
-**Speaker:** **Harsh Bhongade** | **Time:** ~1 Minute 15 Seconds
+**Speaker:** **Harsh Bhongade** *(introduced by **Kaustubh**)* | **Time:** ~1 Minute
 
 #### 🗣️ Spoken Script:
-> *"Thank you, Kaustubh. To validate our predictive accuracy, all models were trained and evaluated using stratified 5-fold cross-validation with grid-searched hyperparameters:
-> 
-> - For **Cardiovascular Heart Disease**, our **XGBoost Classifier** achieved **90.2% Accuracy** and an exceptional **ROC-AUC of 0.954**, with 0.89 precision and 0.91 recall.
+> **Harsh:** *"Thank you, Kaustubh. For dataset training and model evaluation, we applied stratified 5-fold cross-validation with grid-searched hyperparameters across our three disease datasets:
+> - For **Cardiovascular Heart Disease**, our **XGBoost Classifier** achieved **90.2% Accuracy** and an **ROC-AUC of 0.954** with 0.91 recall.
 > - For **Type-2 Diabetes**, our **Random Forest Classifier** achieved **81.8% Accuracy** and **0.872 ROC-AUC**.
-> - For **Chronic Kidney Disease**, our **Random Forest and XGBoost models** achieved **100.0% Accuracy** and a perfect **1.000 ROC-AUC** across all 24 biomarkers.
-> 
-> Next, Soham will discuss our system-wide scenario testing."*
+> - For **Chronic Kidney Disease**, our **Random Forest and XGBoost models** achieved **100.0% Accuracy** and a perfect **1.000 ROC-AUC** across all 24 parameters."*
 
 ---
 
-### 🔴 SLIDE 10: Testing & Validation Across Clinical Scenarios
-**Speaker:** **Soham Khadatkar** | **Time:** ~1 Minute 15 Seconds
+### 🟢 SLIDE 10: Testing & Validation Across Clinical Scenarios
+**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute 15 Seconds
 
 #### 🗣️ Spoken Script:
-> *"To verify end-to-end operational stability, we created an automated integration testing suite that evaluated 9 real-world clinical preset profiles across all 3 diseases:
+> *"Thank you, Harsh. To validate system-wide stability across real-world patient profiles, I authored an automated integration test suite (`scratch/test_presets.py`) evaluating 9 clinical preset scenarios across all 3 diseases.
 > 
-> As shown on the slide, every single preset—ranging from Healthy CLEAR cases to Severe CRITICAL cases—passed with **100% success and zero runtime exceptions**:
-> - In Heart Disease, risk scaled correctly from 3.7% up to 98.9% matching Framingham scores.
-> - In Diabetes, risk tracked glucose and insulin drivers accurately.
-> - In CKD, eGFR correctly mapped from 115.4 mL/min in healthy patients down to 14.6 mL/min in Stage 5 severe patients.
-> - Every scenario successfully compiled and exported a publication-grade ReportLab PDF brief.
-> 
-> I will now outline our solution analysis."*
+> As shown on the slide, all **9 out of 9 presets passed with 100% success and zero runtime exceptions**:
+> - Heart disease risk scaled smoothly from 3.7% in healthy presets up to 98.9% in severe cases.
+> - Diabetes risk accurately tracked glucose and insulin drivers.
+> - CKD $e\text{GFR}$ correctly mapped from 115.4 mL/min in Stage 1 healthy presets down to 14.6 mL/min in Stage 5 severe kidney failure.
+> - Every scenario compiled and exported a publication-grade ReportLab clinical PDF summary."*
 
 ---
 
-### 🔴 SLIDE 11: Analysis of Developed Solution (SWOT)
-**Speaker:** **Soham Khadatkar** | **Time:** ~1 Minute
+### 🟢 SLIDE 11: Analysis of Developed Solution (SWOT)
+**Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute
 
 #### 🗣️ Spoken Script:
-> *"Evaluating MedXplain's engineering strengths and limitations:
+> *"Analyzing MedXplain's engineering strengths and technical bounds:
 > 
 > **Key Strengths:**
-> 1. True Dual-Verification connecting ML with clinical scores.
-> 2. Mathematical transparency audited by agreement and stability metrics.
-> 3. Actionable counterfactual recourse for home patients.
-> 4. Hallucination-free AI Nurse medical briefs.
-> 5. One-click clinical PDF document export.
+> 1. Dual-verification connecting empirical ML predictions with clinical medical scores.
+> 2. Mathematical transparency audited by agreement and multi-seed stability metrics.
+> 3. Actionable counterfactual recourse empowering home patient care.
+> 4. Hallucination-free AI Nurse medical narratives.
+> 5. Automated one-click ReportLab PDF report generation.
 > 
 > **Limitations:**
-> 1. Currently focused on structured tabular EHR data rather than DICOM imaging.
-> 2. Multi-seed LIME computations introduce a 1.5-second CPU overhead on 24-feature CKD data.
-> 3. Baseline training sets carry demographic biases requiring multi-ethnic cohort expansion.
-> 
-> I hand over to Kaustubh for our concluding remarks."*
+> 1. Currently focused on structured tabular EHR lab data rather than raw DICOM imaging.
+> 2. Multi-seed LIME computations introduce ~1.5 seconds CPU compute overhead on 24-feature CKD data.
+> 3. Training datasets carry demographic biases requiring multi-ethnic cohort expansion."*
 
 ---
 
@@ -441,25 +423,23 @@ This section provides the **exact word-for-word spoken presentation script** for
 **Speaker:** **Kaustubh Kachole** | **Time:** ~1 Minute
 
 #### 🗣️ Spoken Script:
-> *"Thank you, Soham.
-> 
-> In conclusion, **MedXplain successfully bridges the critical divide between artificial intelligence accuracy and human clinical trust**. By fusing game-theoretic feature attribution, multi-seed surrogate stability, evidence-based medical calculators, and compassionate AI Nurse communication, we provide patients and clinicians with a transparent, verifiable diagnostic platform.
+> *"In conclusion, **MedXplain successfully bridges the critical divide between artificial intelligence accuracy and human clinical trust**. By synthesizing game-theoretic feature attribution, multi-seed surrogate stability, evidence-based medical calculators, and compassionate AI Nurse communication, we provide patients and clinicians with a transparent, verifiable diagnostic platform.
 > 
 > **Our Future Roadmap includes three key milestones:**
 > 1. Direct **HL7/FHIR API Integration** into hospital Electronic Health Record systems.
 > 2. **Multi-Ethnic Cohort Retraining** to eliminate demographic baseline biases.
-> 3. **Native Mobile App Deployment** bringing the AI Nurse and simulator directly to patients' smartphones.
+> 3. **Native Mobile App Deployment** bringing the AI Nurse companion and simulator directly to patients' smartphones.
 > 
-> Thank you for your time and attention. We are now open to your questions and feedback."*
+> Thank you for your time and attention. We are now happy to take your questions."*
 
 ---
 
-### 💡 Evaluator Q&A Preparation Cheat-Sheet (For Kaustubh & Team)
+### 💡 Evaluator Q&A Preparation Cheat-Sheet (For Kaustubh)
 
-| Anticipated Question | Recommended Speaker | Key Spoken Technical Answer |
-| :--- | :--- | :--- |
-| **Q1: Why use SHAP and LIME together instead of just SHAP?** | **Kaustubh** | *"SHAP provides global axiomatic consistency via Shapley values, while LIME provides local linear surrogate boundaries. By combining them in our Explainability Agreement Index (Jaccard + Kendall's $\tau$), we verify that the explanation is robust and not an artifact of a single explainer algorithm."* |
-| **Q2: How do you prevent LIME instability?** | **Kaustubh** | *"Standard LIME uses random sampling which can vary across runs. We engineered a Multi-Seed Perturbation Index running 3 parallel passes with seeds 42, 101, and 777 (120 samples each) to compute real-time variance and guarantee reproducibility."* |
-| **Q3: Why not use GPT-4 or LLMs for the AI Nurse narrative?** | **Kaustubh** | *"General LLMs introduce unacceptable medical hallucination risks in clinical diagnostics. Our AI Nurse engine is a deterministic, rule-based prose generator that maps exact SHAP attribution vectors into medically vetted template structures with 100% safety."* |
-| **Q4: How did you handle 100% accuracy in CKD dataset?** | **Harsh** | *"The UCI CKD dataset has 24 highly predictive physiological markers (such as Serum Creatinine, Hemoglobin, and Specific Gravity) that create clear decision boundaries. We validated with stratified 5-fold cross-validation to ensure zero data leakage."* |
-| **Q5: How are the medical risk scores calculated?** | **Soham** | *"We implemented standard equations: Framingham 10-year risk for heart disease, Nathan ADAG regression for $e\text{HbA1c}$, and the CKD-EPI 2021 creatinine equation for $e\text{GFR}$, mapping patients directly to KDIGO Stages 1 through 5."* |
+| Anticipated Question | Primary Technical Answer by Kaustubh |
+| :--- | :--- |
+| **Q1: Why use SHAP and LIME together instead of just SHAP?** | *"SHAP provides global axiomatic consistency via Shapley values, while LIME provides local linear surrogate boundaries. By combining them in our Explainability Agreement Index (Jaccard + Kendall's $\tau$), we verify that the explanation is robust and not an artifact of a single explainer algorithm."* |
+| **Q2: How do you prevent LIME instability?** | *"Standard LIME uses random sampling which can vary across runs. I engineered a Multi-Seed Perturbation Index running 3 parallel passes with seeds 42, 101, and 777 (120 samples each) to compute real-time variance and guarantee reproducibility."* |
+| **Q3: Why not use GPT-4 or LLMs for the AI Nurse narrative?** | *"General LLMs introduce unacceptable medical hallucination risks in clinical diagnostics. Our AI Nurse engine is a deterministic prose generator that maps exact SHAP attribution vectors into medically vetted template structures with 100% safety."* |
+| **Q4: How did you handle 100% accuracy in CKD dataset?** | *"The UCI CKD dataset has 24 highly predictive physiological markers (such as Serum Creatinine, Hemoglobin, and Specific Gravity) that create clear decision boundaries. We validated with stratified 5-fold cross-validation to ensure zero data leakage."* |
+| **Q5: How are the medical risk scores calculated?** | *"We implemented standard equations: Framingham 10-year risk for heart disease, Nathan ADAG regression for $e\text{HbA1c}$, and the CKD-EPI 2021 creatinine equation for $e\text{GFR}$, mapping patients directly to KDIGO Stages 1 through 5."* |
